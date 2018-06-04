@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 750px;
+  justify-content: center;
+}
+
+.container > * {
+  background-color: white;
+}
+
+.container > div {
+  margin-bottom: 20px;
+}
+
+.flip {
+  font-size: 2rem;
+  padding: 3rem;
+  border: 1px solid #e5f0ff;
+  box-shadow: 0 0 30px 0 #e9f0f6;
+}
+
+.flip button {
+  margin: 10px auto;
+}
+
+.flip .error {
+  width: 70%;
+}
+
+.flip > div,
+.flip > span {
+  margin: 10px;
+  width: 100%;
+}
+
+.how-to-play .el-dialog {
+  margin-top: 40px !important;
+}
+
+.winners {
+  padding: 3rem;
+  border: 1px solid #e5f0ff;
+  box-shadow: 0 0 30px 0 #e9f0f6;
+}
+
+.history {
+  padding: 3rem;
+  border: 1px solid #e5f0ff;
+  box-shadow: 0 0 30px 0 #e9f0f6;
+  align-self: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.btn {
+  border: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: #9549c8;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+  width: 120px;
+  height: 40px;
+  display: inline-block;
+  line-height: 40px;
+}
+
+.btn:hover {
+  background-color: #e0b803;
+  color: white;
+}
+
+.btn:focus {
+  background-color: #9549c8;
+  color: white;
+}
+
+.error {
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.form {
+  width: auto;
+  display: flex;
+  justify-items: space-around;
+  flex-direction: column;
+}
+
+.form .form-box {
+  display: block;
+  text-align: right;
+  width: 310px;
+  max-width: 100%;
+  margin: 10px auto;
+}
+
+.form span {
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  width: 100%;
+}
+
+.form-input {
+  padding: 1rem;
+  border: 1px solid grey;
+  background-color: rgb(241, 241, 241);
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #9549c8;
+}
+
+.form-label {
+  text-align: right;
+  margin-right: 1rem;
+  align-self: center;
+}
+
+.form-btn {
+  justify-self: center;
+}
+
+.form-bet--currency {
+  border-left: 1px solid transparent;
+}
+
+.form-prize {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form-error {
+  font-weight: bold;
+  color: red;
+}
+
+.table {
+  font-size: 1.5rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.winners caption,
+.history caption {
+  color: #9549c8;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.table td,
+.table th {
+  border: 1px solid #000;
+  padding: 0.8rem 1.3rem;
+  position: relative;
+  height: 30px;
+}
+
+.table td > *,
+.table th > * {
+  position: absolute;
+  top: 0;
+  padding: 0.8rem;
+  position: relative;
+  height: 30px;
+}
+
+.el-popover {
+  font-size: 1.5rem;
+}
+
+.popover-button {
+  padding: 0;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: blue;
+}
+
+.popup a {
+  color: #9549c8;
+  text-decoration: none;
+}
+
+.popup__content {
+  background-color: #fff;
+  position: absolute;
+  color: #000;
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup__title {
+  color: #9549c8;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.popup__content-box {
+  padding: 2%;
+  background: ghostwhite;
+}
+
+.el-button.btn span {
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  transition: 200ms;
+}
+
+.el-button.btn {
+  padding: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .el-dialog {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .el-dialog {
+    width: 90%;
+  }
+}
+
+.el-dialog__header {
+  text-align: center;
+}
+
+.el-dialog__title {
+  color: #9549c8;
+  font-weight: bold;
+  font-size: 3rem;
+  align-self: center;
+}
