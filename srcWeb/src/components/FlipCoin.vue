@@ -174,6 +174,7 @@
 
         this.flipping = true;
         console.log("Flip started");
+        window.ga('send', 'event', 'flipStarted');
 
         this.contractHasEnoughEther().then((contractHasEnoughEth) => {
           if (!contractHasEnoughEth) {

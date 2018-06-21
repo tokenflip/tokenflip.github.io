@@ -50,7 +50,7 @@
       </el-row>
     </el-row>
     <el-row v-if="flipInfo && !flipInfo.completed && showRefund && !refundStarted" class="info-container">
-      <p class="text">Looks like your coin flip has not resolved yet. Press the button bellow to get the refund.</p>
+      <p class="text">Looks like your token flip has not resolved yet. Press the button bellow to get the refund.</p>
       <el-button @click="refund" class="btn">Refund</el-button>
     </el-row>
     <el-row v-if="refundStarted && !refunded" class="info-container">

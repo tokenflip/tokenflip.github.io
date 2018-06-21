@@ -79,6 +79,7 @@
         });
       },
       flipCoinWithEther() {
+        window.ga('send', 'event', 'metamaskPopup', 'start', 'labelETH');
         this.FlipInstance.methods.flipCoinWithEther(this.multiplier, this.getSelectedSideIndex())
           .send({
             from: this.defaultAccount,
@@ -86,6 +87,8 @@
           })
           .once('transactionHash', (txHash) => {
             this.onTxHash(txHash)
+             window.ga('send', 'event', 'metamask', 'txLead', 'labelETH');
+            
           })
           .once('receipt', (receipt) => { })
           .on('error', (error) => {
@@ -94,6 +97,7 @@
           })
       },
       flipCoinWithAIX() {
+        window.ga('send', 'event', 'metamaskPopup', 'start', 'labelAIX');
         let bytes = this.web3.eth.abi.encodeParameters(['uint8', 'uint8'], [2, this.getSelectedSideIndex()])
         this.TokenInstance.methods.approveAndCall(this.FlipInstance.options.address,
           this.web3.utils.toWei(this.betAmount), bytes)
@@ -102,6 +106,7 @@
           })
           .once('transactionHash', (txHash) => {
             this.onTxHash(txHash)
+             window.ga('send', 'event', 'metamask', 'txLead', 'labelAIX');
           })
           .once('receipt', (receipt) => { })
           .on('error', (error) => {

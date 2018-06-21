@@ -49,13 +49,13 @@
           <br> Token min amount {{ minBetAIX.toString() }} AIX - {{ maxBetAIX.toString() }} AIX
           <br>
           <br> Bet: Choose Token or ETH
-          <br> Coin side: Choose Obverse (Ether sign) or Reverse (1) side.
+          <br> Token side: Choose Obverse (Ether sign) or Reverse (1) side.
           <br>
           <br> Prize Formula:
           <br> If token then prize = (bet - fee) * 2
           <br> If ETH then prize = (bet - fee) * [bancor price] * 2
           <br>
-          <br> Coin Flipping time depends on:
+          <br> Token Flipping time depends on:
           <br> - blockchain transaction execution time
           <br> - gas you provided for transactions
           <br> - oracle response transaction.
